@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<xliff version="1.1" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+  <file datatype="php" original="contao/languages/de/tl_settings.xlf" source-language="en" target-language="de">
+    <body>
+      <trans-unit id="tl_settings.hostily_captcha_legend">
+        <source>hostily Captcha</source>
+        <target>hostily Captcha</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaSiteKey.0">
+        <source>Site key</source>
+        <target>Site-Key</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaSiteKey.1">
+        <source>The public key of your project at captcha.hostily.de. Without site key and secret nothing is protected and nothing is blocked.</source>
+        <target>Der öffentliche Schlüssel Ihres Projekts auf captcha.hostily.de. Ohne Site-Key und Secret ist nichts geschützt und nichts gesperrt.</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaSecret.0">
+        <source>Secret</source>
+        <target>Secret</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaSecret.1">
+        <source>The secret key of your project. It stays on the server and is never written into a page.</source>
+        <target>Der geheime Schlüssel Ihres Projekts. Er bleibt auf dem Server und steht nie in einer Seite.</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaServiceUrl.0">
+        <source>Service URL</source>
+        <target>Dienst-URL</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaServiceUrl.1">
+        <source>Default: https://captcha.hostily.de (leave empty), or the address of your own installation.</source>
+        <target>Vorgabe: https://captcha.hostily.de (leer lassen) oder die Adresse einer eigenen Installation.</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaMode.0">
+        <source>Mode</source>
+        <target>Modus</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaMode.1">
+        <source>Visible shows a checkbox, invisible solves the check when the form is submitted.</source>
+        <target>Sichtbar zeigt ein Kästchen, unsichtbar löst die Prüfung beim Absenden.</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaModes.sichtbar">
+        <source>visible</source>
+        <target>sichtbar</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaModes.unsichtbar">
+        <source>invisible</source>
+        <target>unsichtbar</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaLanguage.0">
+        <source>Widget language</source>
+        <target>Sprache des Widgets</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaLanguage.1">
+        <source>Automatic uses the language of the page (German or English, otherwise the widget decides).</source>
+        <target>Automatisch nimmt die Sprache der Seite (Deutsch oder Englisch, sonst entscheidet das Widget).</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaLanguages.auto">
+        <source>automatic (language of the page)</source>
+        <target>automatisch (Sprache der Seite)</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaLanguages.de">
+        <source>German</source>
+        <target>Deutsch</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaLanguages.en">
+        <source>English</source>
+        <target>Englisch</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaOnError.0">
+        <source>If the service fails</source>
+        <target>Bei Ausfall des Dienstes</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaOnError.1">
+        <source>Also applies to a wrong secret. Every failure is written to the system log.</source>
+        <target>Gilt auch bei falschem Secret. Jeder Ausfall steht im Systemlog.</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaOnErrors.pass">
+        <source>let submissions pass (default)</source>
+        <target>Einsendungen durchlassen (Standard)</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaOnErrors.block">
+        <source>block submissions</source>
+        <target>Einsendungen blockieren</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaReplace.0">
+        <source>Replace the built-in captcha</source>
+        <target>Eingebautes Captcha ersetzen</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaReplace.1">
+        <source>Uses hostily Captcha wherever Contao itself asks for its captcha (member registration, lost password, comments, form fields of type "Captcha").</source>
+        <target>Nimmt überall hostily Captcha, wo Contao selbst sein Captcha verlangt (Mitglieder-Registrierung, Passwort vergessen, Kommentare, Formularfelder vom Typ „Captcha“).</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

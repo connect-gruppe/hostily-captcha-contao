@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<xliff version="1.1" xmlns="urn:oasis:names:tc:xliff:document:1.1">
+  <file datatype="php" original="contao/languages/en/default.xlf" source-language="en">
+    <body>
+      <trans-unit id="FFL.hostilyCaptcha.0">
+        <source>hostily Captcha</source>
+      </trans-unit>
+      <trans-unit id="FFL.hostilyCaptcha.1">
+        <source>Spam protection by hostily (captcha.hostily.de). Site key and secret are set in the system settings.</source>
+      </trans-unit>
+      <trans-unit id="ERR.hostilyCaptchaMissing">
+        <source>Please confirm that you are not a robot.</source>
+      </trans-unit>
+      <trans-unit id="ERR.hostilyCaptchaInvalid">
+        <source>The spam check failed. Please try again.</source>
+      </trans-unit>
+      <trans-unit id="ERR.hostilyCaptchaRejected">
+        <source>Your submission was rejected by the spam protection.</source>
+      </trans-unit>
+      <trans-unit id="ERR.hostilyCaptchaUnavailable">
+        <source>The spam check is currently not available. Please try again later.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

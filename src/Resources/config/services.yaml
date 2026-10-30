@@ -1,0 +1,8 @@
+services:
+    # Oeffentlich, weil das Widget (ein Contao-Widget, kein Dienst) ihn ueber den Container holt.
+    Hostily\ContaoCaptcha\Service\Verifier:
+        public: true
+        arguments:
+            - '@logger'
+        tags:
+            - { name: monolog.logger, channel: contao.error }

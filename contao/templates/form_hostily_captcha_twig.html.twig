@@ -1,0 +1,14 @@
+{# Nur Contao 6 (dort gibt es keine .html5-Vorlagen mehr); das Widget waehlt diese Vorlage selbst. Gleicher Aufbau wie form_hostily_captcha.html5. #}
+{% extends '@Contao/form_row.html.twig' %}
+
+{% block label %}
+    {{ generateLabel.invoke()|raw }}
+{% endblock %}
+
+{% block field %}
+    {% if hasErrors.invoke() %}
+        <p class="error">{{ getErrorAsString.invoke() }}</p>
+    {% endif %}
+
+    {{ generate.invoke()|raw }}
+{% endblock %}

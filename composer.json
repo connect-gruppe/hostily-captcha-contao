@@ -1,0 +1,25 @@
+{
+    "name": "hostily/contao-captcha",
+    "description": "hostily Captcha spam protection for Contao: form field for the form generator (captcha.hostily.de)",
+    "type": "contao-bundle",
+    "version": "0.1.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hostily"
+        }
+    ],
+    "homepage": "https://captcha.hostily.de",
+    "require": {
+        "php": ">=7.4",
+        "contao/core-bundle": "^4.13 || ^5.3 || ^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hostily\\ContaoCaptcha\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Hostily\\ContaoCaptcha\\ContaoManager\\Plugin"
+    }
+}
