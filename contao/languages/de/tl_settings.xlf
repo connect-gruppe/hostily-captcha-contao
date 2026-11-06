@@ -35,8 +35,12 @@
         <target>Modus</target>
       </trans-unit>
       <trans-unit id="tl_settings.hostilyCaptchaMode.1">
-        <source>Visible shows a checkbox, invisible solves the check when the form is submitted.</source>
-        <target>Sichtbar zeigt ein Kästchen, unsichtbar löst die Prüfung beim Absenden.</target>
+        <source>Visible shows a checkbox, invisible solves the check when the form is submitted. Press and hold and Slider always also offer the alternative &quot;Confirm with a click&quot;. &quot;As in the customer portal&quot; uses the setting of your project at captcha.hostily.de.</source>
+        <target>Sichtbar zeigt ein Kästchen, unsichtbar löst die Prüfung beim Absenden. „Gedrückt halten“ und „Schieberegler“ bieten immer zusätzlich die Alternative „Per Klick bestätigen“. „Wie im Kundenportal“ übernimmt die Einstellung Ihres Projekts auf captcha.hostily.de.</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaModes.portal">
+        <source>as in the customer portal</source>
+        <target>Wie im Kundenportal</target>
       </trans-unit>
       <trans-unit id="tl_settings.hostilyCaptchaModes.sichtbar">
         <source>visible</source>
@@ -45,6 +49,22 @@
       <trans-unit id="tl_settings.hostilyCaptchaModes.unsichtbar">
         <source>invisible</source>
         <target>unsichtbar</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaModes.halten">
+        <source>press and hold</source>
+        <target>Gedrückt halten</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaModes.schieben">
+        <source>slider</source>
+        <target>Schieberegler</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaHoldTime.0">
+        <source>Hold time (ms)</source>
+        <target>Haltezeit (ms)</target>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaHoldTime.1">
+        <source>800 to 3000 milliseconds, only for the mode Press and hold. Empty: default of the widget (1500).</source>
+        <target>800 bis 3000 Millisekunden, nur für den Modus „Gedrückt halten“. Leer: Vorgabe des Widgets (1500).</target>
       </trans-unit>
       <trans-unit id="tl_settings.hostilyCaptchaLanguage.0">
         <source>Widget language</source>

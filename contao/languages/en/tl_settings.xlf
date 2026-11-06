@@ -27,13 +27,28 @@
         <source>Mode</source>
       </trans-unit>
       <trans-unit id="tl_settings.hostilyCaptchaMode.1">
-        <source>Visible shows a checkbox, invisible solves the check when the form is submitted.</source>
+        <source>Visible shows a checkbox, invisible solves the check when the form is submitted. Press and hold and Slider always also offer the alternative &quot;Confirm with a click&quot;. &quot;As in the customer portal&quot; uses the setting of your project at captcha.hostily.de.</source>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaModes.portal">
+        <source>as in the customer portal</source>
       </trans-unit>
       <trans-unit id="tl_settings.hostilyCaptchaModes.sichtbar">
         <source>visible</source>
       </trans-unit>
       <trans-unit id="tl_settings.hostilyCaptchaModes.unsichtbar">
         <source>invisible</source>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaModes.halten">
+        <source>press and hold</source>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaModes.schieben">
+        <source>slider</source>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaHoldTime.0">
+        <source>Hold time (ms)</source>
+      </trans-unit>
+      <trans-unit id="tl_settings.hostilyCaptchaHoldTime.1">
+        <source>800 to 3000 milliseconds, only for the mode Press and hold. Empty: default of the widget (1500).</source>
       </trans-unit>
       <trans-unit id="tl_settings.hostilyCaptchaLanguage.0">
         <source>Widget language</source>

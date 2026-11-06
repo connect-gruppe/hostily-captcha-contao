@@ -20,7 +20,7 @@ use Psr\Log\LoggerInterface;
  */
 class Verifier
 {
-    public const VERSION = '0.1.0';
+    public const VERSION = '0.2.0';
     public const TOKEN_FIELD = 'hostily-captcha-token';
     public const DEFAULT_URL = 'https://captcha.hostily.de';
 
@@ -62,7 +62,20 @@ class Verifier
 
     public function mode(): string
     {
-        return $this->setting('Mode') === 'unsichtbar' ? 'unsichtbar' : 'sichtbar';
+        $mode = $this->setting('Mode');
+
+        // "portal" = Wie im Kundenportal (kein Attribut); leerer oder unbekannter Altwert: sichtbar wie bisher
+        return \in_array($mode, ['portal', 'sichtbar', 'unsichtbar', 'halten', 'schieben'], true) ? $mode : 'sichtbar';
+    }
+
+    /**
+     * Haltezeit in ms (800 bis 3000), nur fuer den Modus "halten"; 0 = Vorgabe des Widgets.
+     */
+    public function holdTime(): int
+    {
+        $ms = (int) $this->setting('HoldTime');
+
+        return $ms > 0 ? max(800, min(3000, $ms)) : 0;
     }
 
     /**

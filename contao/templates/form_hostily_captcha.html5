@@ -6,7 +6,7 @@
 
 <?php $this->block('field'); ?>
   <?php if ($this->hasErrors()): ?>
-    <p class="error"><?= $this->getErrorAsString() ?></p>
+    <p class="error" id="<?= $this->errorId() ?>" role="alert"><?= $this->getErrorAsString() ?></p>
   <?php endif; ?>
 
   <?= $this->generate() ?>

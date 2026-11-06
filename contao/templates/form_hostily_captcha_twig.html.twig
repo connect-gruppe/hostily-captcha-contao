@@ -7,7 +7,7 @@
 
 {% block field %}
     {% if hasErrors.invoke() %}
-        <p class="error">{{ getErrorAsString.invoke() }}</p>
+        <p class="error" id="{{ errorId.invoke() }}" role="alert">{{ getErrorAsString.invoke() }}</p>
     {% endif %}
 
     {{ generate.invoke()|raw }}

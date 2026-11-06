@@ -88,11 +88,23 @@ class FormHostilyCaptcha extends Widget
      */
     public function generateLabel(): string
     {
-        if ($this->strLabel && $this->strLabel === ($GLOBALS['TL_LANG']['MSC']['securityQuestion'] ?? null)) {
-            return '';
-        }
+        // Kein <label for>: das Ziel ist ein Custom Element ohne Eingabefeld; das Widget bekommt die Beschriftung stattdessen per aria-labelledby
+        return $this->hasLabel() ? '<span id="' . $this->labelId() . '" class="label">' . $this->strLabel . '</span>' : '';
+    }
 
-        return $this->strLabel ? '<label>' . $this->strLabel . '</label>' : '';
+    public function labelId(): string
+    {
+        return 'ctrl_' . $this->strId . '_lbl';
+    }
+
+    public function errorId(): string
+    {
+        return 'ctrl_' . $this->strId . '_err';
+    }
+
+    private function hasLabel(): bool
+    {
+        return $this->strLabel && $this->strLabel !== ($GLOBALS['TL_LANG']['MSC']['securityQuestion'] ?? null);
     }
 
     /**
@@ -105,12 +117,16 @@ class FormHostilyCaptcha extends Widget
             return '';
         }
 
+        $mode = $verifier->mode();
         $html = \sprintf(
-            '<hostily-captcha data-site-key="%s" data-api="%s/api/" data-modus="%s"%s></hostily-captcha>',
+            '<hostily-captcha data-site-key="%s" data-api="%s/api/"%s%s%s%s%s></hostily-captcha>',
             StringUtil::specialchars($verifier->siteKey()),
             StringUtil::specialchars($verifier->serviceUrl()),
-            $verifier->mode(),
-            $verifier->language() !== '' ? ' data-sprache="' . $verifier->language() . '"' : ''
+            $mode !== 'portal' ? ' data-modus="' . $mode . '"' : '',
+            $mode === 'halten' && $verifier->holdTime() > 0 ? ' data-haltezeit="' . $verifier->holdTime() . '"' : '',
+            $verifier->language() !== '' ? ' data-sprache="' . $verifier->language() . '"' : '',
+            $this->hasLabel() ? ' aria-labelledby="' . $this->labelId() . '"' : '',
+            $this->hasErrors() ? ' aria-describedby="' . $this->errorId() . '"' : ''
         );
 
         if (!self::$scriptDone && !$this->asEditorView) {

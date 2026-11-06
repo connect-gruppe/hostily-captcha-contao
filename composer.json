@@ -2,7 +2,7 @@
     "name": "hostily/contao-captcha",
     "description": "hostily Captcha spam protection for Contao: form field for the form generator (captcha.hostily.de)",
     "type": "contao-bundle",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "license": "MIT",
     "authors": [
         {

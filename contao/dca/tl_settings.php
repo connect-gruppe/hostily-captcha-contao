@@ -7,7 +7,7 @@ use Contao\CoreBundle\DataContainer\PaletteManipulator;
 PaletteManipulator::create()
     ->addLegend('hostily_captcha_legend', 'chmod_legend', PaletteManipulator::POSITION_BEFORE, true)
     ->addField(
-        ['hostilyCaptchaSiteKey', 'hostilyCaptchaSecret', 'hostilyCaptchaServiceUrl', 'hostilyCaptchaMode', 'hostilyCaptchaLanguage', 'hostilyCaptchaOnError', 'hostilyCaptchaReplace'],
+        ['hostilyCaptchaSiteKey', 'hostilyCaptchaSecret', 'hostilyCaptchaServiceUrl', 'hostilyCaptchaMode', 'hostilyCaptchaHoldTime', 'hostilyCaptchaLanguage', 'hostilyCaptchaOnError', 'hostilyCaptchaReplace'],
         'hostily_captcha_legend',
         PaletteManipulator::POSITION_APPEND
     )
@@ -31,9 +31,15 @@ $GLOBALS['TL_DCA']['tl_settings']['fields']['hostilyCaptchaServiceUrl'] = [
 
 $GLOBALS['TL_DCA']['tl_settings']['fields']['hostilyCaptchaMode'] = [
     'inputType' => 'select',
-    'options' => ['sichtbar', 'unsichtbar'],
+    'default' => 'sichtbar',
+    'options' => ['portal', 'sichtbar', 'unsichtbar', 'halten', 'schieben'],
     'reference' => &$GLOBALS['TL_LANG']['tl_settings']['hostilyCaptchaModes'],
     'eval' => ['tl_class' => 'w50'],
+];
+
+$GLOBALS['TL_DCA']['tl_settings']['fields']['hostilyCaptchaHoldTime'] = [
+    'inputType' => 'text',
+    'eval' => ['rgxp' => 'natural', 'minval' => 800, 'maxval' => 3000, 'maxlength' => 4, 'placeholder' => '1500', 'tl_class' => 'w50'],
 ];
 
 $GLOBALS['TL_DCA']['tl_settings']['fields']['hostilyCaptchaLanguage'] = [
